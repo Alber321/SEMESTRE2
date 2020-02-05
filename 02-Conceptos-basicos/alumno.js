@@ -4,13 +4,17 @@
 * Generalmente el nombre coincide con el del archivo
 */
 class Alumno{
-    constructor(){
+    constructor(nombre, fecha, cuenta){
         console.log("El objeto ah sido inicializado");
+        this.nombre = nombre;
+        this.fecha=fecha;
+        this.cuenta=cuenta;
     }
-    decirHola(nombre) 
+    decirHola() 
     {
-        console.log("Hola soy " + nombre + " Buen día");
-        console.log(`Hola soy ${nombre}, buen día`);
+
+        console.log(`Hasta luego! ${this.nombre} se ah ido`)
+
         /* Metodos:
         * Utilizan LowerCamelCase
         * Inician con un verbo en infinitivo ( acciones) 
@@ -18,15 +22,23 @@ class Alumno{
         */
 
     }    
-    decirAdios(nombre){
-        console.log(`Hasta Luego ${nombre}! se ah ido F`)
+    decirAdios(){
+        console.log(`Hasta luego! ${this.nombre} se ah ido`)
+    }
+    DatosAlumno(){
+        console.log(`Nombre: ${this.nombre}`)
+        console.log(`Fehca de Nacimiento: ${this.fecha}`)
+        console.log(`Numero de Cuenta: ${this.cuenta}`)
     }
 }
-let alumno1 = new Alumno();
-let alumno2 = new Alumno();
+let alumno1 = new Alumno("Luis", "3 Septiembre 2000", "2016136");
+let alumno2 = new Alumno("Goku", "21 Agosto 2001", "20152132");
 
-alumno1.decirHola("Juan");
-alumno2.decirHola("Pedro");
+alumno1.decirHola();
+alumno2.decirHola();
 
-alumno1.decirAdios("Juan");
-alumno2.decirAdios("Pedro");
+alumno1.decirAdios();
+alumno2.decirAdios();
+
+alumno1.DatosAlumno();
+alumno2.DatosAlumno();
